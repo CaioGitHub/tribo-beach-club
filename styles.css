@@ -21,14 +21,14 @@ body {
 }
 
 header {
-  background: url(assets/Image-header-v3.jpg) no-repeat center center;
+  background: url(assets/Image-header-v4.jpg) no-repeat;
   background-size: cover;
-  height: 100vh;
-  position: relative;
+  height: 113vh;
   color: black;
-  text-align: center;
-  padding: 0;
+  background-position: center;
 }
+
+
 
 .linear-gradient {
   background: linear-gradient(to bottom, rgb(253, 246, 217), rgb(255, 255, 255) 20%);
@@ -39,10 +39,19 @@ header {
   bottom: 0;
   height: 100%;
   width: 100%;
-  top: 65%;
+  top: 55%;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@media (max-width: 800px) {
+  header {
+    height: 90vh !important;
+  }
+  .header-content {
+    top: 40% !important;
+  }
 }
 
 .button {
@@ -91,6 +100,13 @@ header {
   text-align: center;
 }
 
+.div-section {
+  margin-top: 100px;
+  width: 100%;
+  padding: 50px 20px;
+  text-align: center;
+}
+
 h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
@@ -126,19 +142,23 @@ footer {
   padding: 20px 0;
   text-align: center;
 }
-  
-.btn-whatsapp {
+
+.whatsapp {
+  width: 60px;
+  height: 60px;
+  background-color: green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
   position: fixed;
   bottom: 14px;
-  right: 24px;
+  right: 24px; 
+}
 
-  img {
-    max-width: 65px;
-  }
-  img:hover {
-    transform: scale(1.1);
-    transition: 0.2s ease;
-  }
+.whatsapp:hover {
+  transform: scale(1.1);
+  transition: 0.2s ease;
 }
 
 .social-section {
@@ -170,12 +190,17 @@ footer {
   color: black;
 }
 
+.white {
+  color: white;
+}
+
 .logo-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 15px;
+  margin-bottom: 15vh;
   img {
     max-width: 300px;
   }
